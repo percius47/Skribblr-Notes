@@ -23,11 +23,22 @@
    right: 0;
    z-index: 1;
 }
+.nav-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0.5rem;
+}
 .save-btn{
+   
     border: 1px solid white;
     border-radius: 0.5rem;
     padding: 0.25rem ;
+    margin-left: auto;
+ 
 }
+
 .page-grid{
     margin-top: 3.5rem;
     display: grid;
@@ -64,6 +75,7 @@
   color: white;
   padding:0.5rem;
     font-weight: 500;
+    display: flex;
 }
 
 .notes-list-card{
@@ -95,21 +107,7 @@
     font-size: 0.8rem;
     text-align: end;
 }
-/* 
-.new-note-heading{
-    position: fixed;
-    width: 95%;
-    top: 3.6rem;
-    margin: 0 auto;
-    margin-left: -10rem;
-     font-size: 1.2rem;
-  background-color: var(--primary-color);
-  text-align: center;
-  color: white;
-  padding:0.5rem;
-    font-weight: 500;
 
-} */
 .new-note-card{
     margin-top: 2rem;
 background-color: white;
@@ -178,4 +176,24 @@ border: 1px solid white;
 }
 .save-btn:hover,.attach-files:hover{
     cursor: pointer;
+}
+
+.collapse{
+ display: none;
+
+}
+@media screen and (max-width:800px) {
+  .notes-list-card{
+      display: none;
+  }
+  .new-item{
+    
+      grid-column: col-start  /-1;
+     
+  }
+  
+.collapse{
+    display: inline;   
+   }
+  
 }
